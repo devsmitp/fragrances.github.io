@@ -46,8 +46,8 @@ h1 {
     font-size: 1.2em;
 }
 .shop-button {
-    display: inline-block;
-    margin-top: 15px;
+    display: block;
+    margin: 15px auto;
     padding: 12px 24px;
     background-color: #16213E;
     color: #FFFFFF;
@@ -56,6 +56,8 @@ h1 {
     font-weight: 700;
     font-size: 1.1em;
     transition: background-color 0.3s ease, transform 0.2s ease;
+    text-align: center;
+    max-width: 200px;
 }
 .shop-button:hover {
     background-color: #FF69B4;
@@ -68,11 +70,15 @@ h1 {
     margin: 0 auto 2em;
     color: #1A1A2E;
 }
-ul {
-    padding-left: 20px;
+.features {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto 2em;
+    font-size: 1.1em;
+    color: #1A1A2E;
 }
-li {
-    margin-bottom: 0.5em;
+h2 {
+    text-align: center;
 }
 @media (max-width: 1024px) {
     .product-grid {
