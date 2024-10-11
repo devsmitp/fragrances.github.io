@@ -16,6 +16,24 @@ h1 {
     font-size: 2.5em;
     margin-bottom: 0.5em;
 }
+.hero-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 2em;
+    flex-wrap: wrap;
+}
+.hero-image {
+    max-width: 300px;
+    height: auto;
+    margin-right: 2em;
+}
+.hero-text {
+    font-size: 1.2em;
+    max-width: 500px;
+    text-align: center;
+    color: #16213E;
+}
 .product-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -116,9 +134,20 @@ h2 {
     .product-grid {
         grid-template-columns: repeat(2, 1fr);
     }
+    .hero-image {
+        margin-right: 0;
+        margin-bottom: 1em;
+    }
 }
 @media (max-width: 768px) {
     .product-grid {
         grid-template-columns: 1fr;
+    }
+    .hero-section {
+        flex-direction: column;
+    }
+    .hero-image {
+        margin-right: 0;
+        margin-bottom: 1em;
     }
 }
