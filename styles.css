@@ -36,7 +36,7 @@ h1 {
 }
 .product-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: 1fr;
     gap: 20px;
 }
 .product {
@@ -52,7 +52,6 @@ h1 {
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 }
 .prime-product {
-    grid-column: 1 / -1;
     background-color: #FF6B6B; /* Red */
 }
 .product:nth-child(2) {
@@ -131,18 +130,12 @@ h2 {
     text-align: center;
 }
 @media (max-width: 1024px) {
-    .product-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
     .hero-image {
         margin-right: 0;
         margin-bottom: 1em;
     }
 }
 @media (max-width: 768px) {
-    .product-grid {
-        grid-template-columns: 1fr;
-    }
     .hero-section {
         flex-direction: column;
     }
