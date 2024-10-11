@@ -97,12 +97,13 @@ h1 {
 .price {
     font-weight: bold;
     color: #16213E;
-    font-size: 1.2em;
+    font-size: 1.1em;
     transition: transform 0.3s ease;
     display: inline-block;
+    margin-top: 10px;
 }
 .product:hover .price {
-    transform: scale(1.1);
+    transform: scale(1.05);
 }
 .shop-button {
     display: block;
