@@ -144,23 +144,7 @@ h2 {
     background-color: #FFE6F3; /* Light pink for women */
 }
 
-.product::before {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    font-weight: bold;
-    font-size: 1.5em;
-}
-
-.product-grid.men .product::before {
-    content: "♂";
-    color: #16213E;
-}
-
-.product-grid.women .product::before {
-    content: "♀";
-    color: #8E2E5A;
-}
+/* Removed the ::before pseudo-element styles that were adding the gender icons */
 
 @media (max-width: 1024px) {
     .hero-image {
