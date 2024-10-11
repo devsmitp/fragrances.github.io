@@ -175,3 +175,25 @@ h2 {
         margin-bottom: 1em;
     }
 }
+
+/* New styles for footer */
+footer {
+    background-color: #16213E;
+    color: #FFFFFF;
+    text-align: center;
+    padding: 20px;
+    margin-top: 2em;
+}
+
+footer p {
+    margin: 5px 0;
+}
+
+footer a {
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
