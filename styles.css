@@ -27,6 +27,11 @@ h1 {
     max-width: 300px;
     height: auto;
     margin-right: 2em;
+    opacity: 0.8;
+    transition: opacity 0.3s ease;
+}
+.hero-image:hover {
+    opacity: 1;
 }
 .hero-text {
     font-size: 1.2em;
@@ -56,6 +61,11 @@ h1 {
     max-width: 200px;
     height: auto;
     margin-right: 20px;
+    opacity: 0.8;
+    transition: opacity 0.3s ease;
+}
+.product:hover .product-image {
+    opacity: 1;
 }
 .product-info {
     flex: 1;
