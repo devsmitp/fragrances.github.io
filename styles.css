@@ -40,6 +40,7 @@ h1 {
     opacity: 1;
 }
 .hero-text {
+    font-weight: bold;
     font-size: 1.2em;
     max-width: 500px;
     text-align: center;
@@ -78,6 +79,7 @@ h1 {
 }
 .product-info {
     flex: 1;
+    font-weight: bold;
 }
 .product h2 {
     color: #16213E;
@@ -93,8 +95,10 @@ h1 {
     margin: 5px 0;
     font-size: 1em;
     color: #333;
+    text-align: center; /* This centers the text */
 }
 .price {
+    text-align: center; /* This centers the text */ 
     font-weight: bold;
     color: #16213E;
     font-size: 1.1em;
@@ -124,6 +128,7 @@ h1 {
     transform: translateY(-2px);
 }
 .intro {
+    font-weight: bold;
     font-size: 1.1em;
     text-align: center;
     max-width: 800px;
@@ -131,6 +136,7 @@ h1 {
     color: #1A1A2E;
 }
 .features {
+    font-weight: bold;
     text-align: center;
     max-width: 800px;
     margin: 0 auto 2em;
