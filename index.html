@@ -3,75 +3,424 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>KACHBO FRAGRANCES</title>
+    <title>KACHBO FRAGRANCES - Perfume Collection</title>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto:wght@300;400;700&family=Montserrat:wght@800&display=swap" rel="stylesheet">
+    <style>
+        /* Global Styles */
+        body {
+            font-family: 'Roboto', Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #E8EFE6; /* Light sage green background */
+            color: #1A1A2E;
+            line-height: 1.6;
+        }
+
+        h1, h2 {
+            font-family: 'Playfair Display', serif;
+            font-weight: 700;
+        }
+
+        h1 {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 800;
+            font-size: 3em;
+            letter-spacing: 3px;
+            color: #16213E;
+            text-transform: uppercase;
+            margin-bottom: 0.5em;
+            border-bottom: 2px solid #16213E;
+            padding-bottom: 10px;
+            text-align: center;
+        }
+
+        /* Header - Centered Logo */
+        header {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 2em;
+        }
+
+        .logo {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 800;
+            font-size: 2.5em;
+            letter-spacing: 2px;
+            color: #16213E;
+            text-transform: uppercase;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 10px;
+        }
+
+        nav a {
+            color: #16213E;
+            text-decoration: none;
+            font-size: 1.1em;
+            font-weight: 700;
+            text-transform: uppercase;
+        }
+
+        nav a:hover {
+            color: #0056b3;
+        }
+
+        /* Hero Section */
+        .hero-section {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 2em;
+            flex-wrap: wrap;
+        }
+
+        .hero-image {
+            max-width: 300px;
+            height: auto;
+            margin-right: 2em;
+            opacity: 0.8;
+            transition: opacity 0.3s ease;
+        }
+
+        .hero-image:hover {
+            opacity: 1;
+        }
+
+        .hero-text {
+            font-weight: bold;
+            font-size: 1.2em;
+            max-width: 500px;
+            text-align: center;
+            color: #16213E;
+        }
+
+        /* Product Grid */
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin-bottom: 2em;
+        }
+
+        /* Product Item */
+        .product {
+            display: flex;
+            flex-direction: column;
+            background-color: #FFFACD; /* Light yellow background */
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            border: 1px solid #E6E6FA;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            position: relative;
+        }
+
+        .product:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .product-image {
+            max-width: 100%;
+            height: auto;
+            margin-bottom: 20px;
+            opacity: 0.8;
+            transition: opacity 0.3s ease;
+        }
+
+        .product:hover .product-image {
+            opacity: 1;
+        }
+
+        .product-info {
+            flex: 1;
+            font-weight: bold;
+        }
+
+        .product h2 {
+            text-align: center;
+            font-weight: bold;
+            color: #16213E;
+            font-size: 1.8em;
+            margin-bottom: 0.5em;
+            transition: color 0.3s ease;
+        }
+
+        .product:hover h2 {
+            color: #0056b3; /* Darker blue on hover */
+            text-shadow: none; /* Remove text shadow */
+        }
+
+        .product p {
+            margin: 5px 0;
+            font-size: 1em;
+            color: #333;
+            text-align: center;
+            font-weight: bold;
+        }
+
+        .price {
+            text-align: center;
+            font-weight: bold;
+            color: #16213E;
+            font-size: 1.1em;
+            transition: transform 0.3s ease;
+            display: inline-block;
+            margin-top: 10px;
+        }
+
+        .product:hover .price {
+            transform: scale(1.05);
+        }
+
+        .shop-button {
+            display: block;
+            margin: 15px auto;
+            padding: 12px 24px;
+            background-color: #16213E;
+            color: #FFFFFF;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: 700;
+            font-size: 1.1em;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+            text-align: center;
+            max-width: 200px;
+        }
+
+        .shop-button:hover {
+            background-color: #0056b3;
+            transform: translateY(-2px);
+        }
+
+        /* Payment Options */
+        .payment-options {
+            margin-top: 30px;
+            text-align: center;
+        }
+
+        .payment-options ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .payment-options li {
+            font-size: 1.2em;
+            margin-bottom: 10px;
+        }
+
+        /* Footer Styles */
+        footer {
+            background-color: #16213E;
+            color: #FFFFFF;
+            text-align: center;
+            padding: 20px;
+            margin-top: 2em;
+        }
+
+        footer p {
+            margin: 5px 0;
+        }
+
+        footer a {
+            color: #FFFFFF;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+         /* Modal (Pop-up) Styles */
+         .modal {
+            display: none; /* Hidden by default */
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5); /* Background overlay */
+            justify-content: center;
+            align-items: center;
+            padding: 10px;
+            opacity: 0;
+            transition: opacity 0.5s ease; /* Fade-in effect */
+        }
+
+        .modal-content {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            width: 640px;
+            max-width: 100%;
+            text-align: center;
+            transition: transform 0.3s ease, opacity 0.5s ease;
+            opacity: 0;
+            transform: translateY(-50px); /* Start position */
+        }
+
+        .modal.show {
+            opacity: 1;
+        }
+
+        .modal-content.show {
+            opacity: 1;
+            transform: translateY(0); /* End position */
+        }
+
+        .close-btn {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .close-btn:hover,
+        .close-btn:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        /* Additional Styles for the form and confirmation */
+        .confirmation-info {
+            margin: 10px 0;
+            font-size: 1.1em;
+        }
+
+    </style>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-<h1>KACHBO FRAGRANCES</h1>
-
-<div class="hero-section">
-    <img src="images/TurtlePirfume.PNG" alt="Turtle Perfume Bottle" class="hero-image">
-    <p class="hero-text">Discover the essence of the Lone Star State with our exclusive KACHBO FRAGRANCES.</p>
-</div>
-
-<p class="intro">Limited Time Offer! Buy 1 Get 1 Free on Attars! Hurry, offer ends soon!</p>
-
-<h2>MEN</h2>
-<div class="product-grid men">
-    <div class="product prime-product">
-        <img src="images/TurtlePirfume.PNG" alt="Rancher's Reserve" class="product-image">
-        <div class="product-info">
-            <h2>KACHBO MUD</h2>
-            <p>With hints of sage and a touch of warm Mud, it's perfect for the modern cowboy.</p>
-            <p>NOTES: Mud, Jasmine, Cardamon</p>
-            <p class="price">Perfume - 1oz</p>
+    <!-- Header -->
+    <header>
+        <div class="logo">
+            KACHBO FRAGRANCES
         </div>
+    </header>
+
+    <!-- Hero Section -->
+    <div class="hero-section">
+        <img src="images/TurtlePirfume.PNG" alt="Turtle Perfume Bottle" class="hero-image">
+        <p class="hero-text">Discover the essence of the Lone Star State with our exclusive KACHBO FRAGRANCES.</p>
     </div>
 
-    <div class="product">
-        <img src="images/TurtlePirfume.PNG" alt="Prairie Petals" class="product-image">
-        <div class="product-info">
+    <p class="intro">Limited Time Offer! Buy 1 Get 1 Free on Attars! Hurry, offer ends soon!</p>
+
+    <!-- Product Grid for Men and Women -->
+    <section class="product-grid men">
+        <!-- Men Products -->
+        <div class="product">
+            <img src="images/TurtlePirfume.PNG" alt="KACHBO MUD">
+            <h2>KACHBO MUD</h2>
+            <p>With hints of sage and a touch of warm Mud, it's perfect for the modern cowboy.</p>
+            <p>NOTES: Mud, Jasmine, Cardamom</p>
+            <p class="price">1oz</p>
+            <button class="shop-button" onclick="openForm()">Order</button>
+       </div>
+
+        <!-- New Product 1: KACHBO SANDALWOOD -->
+        <div class="product">
+            <img src="images/TurtlePirfume.PNG" alt="KACHBO SAGE">
             <h2>KACHBO SANDALWOOD</h2>
             <p>With notes of jasmine, sandalwood, creating an uplifting and refreshing aroma.</p>
             <p>NOTES: Sandalwood, Jasmine, Cardamom</p>
-            <p class="price">Attar - .17oz | Perfume - 1oz</p>
+            <p class="price">1oz</p>
+            <button class="shop-button" onclick="openForm()">Order</button>
         </div>
-    </div>
-</div>
+    </section>
 
-<h2>WOMEN</h2>
-<div class="product-grid women">
-    <div class="product">
-        <img src="images/TurtlePirfume.PNG" alt="Dusty Daisy" class="product-image">
-        <div class="product-info">
-            <h2>KACHBO CARDAMOM</h2>
-            <p>With notes of fresh cardamom, jasmine, this fragrance is perfect for everyday wear.</p>
-            <p>NOTES: Cardamom, Jasmine, Sandalwood</p>
-            <p class="price">Perfume - 1oz</p>
-        </div>
-    </div>
-
-    <div class="product">
-        <img src="images/TurtlePirfume.PNG" alt="Wrangler's Edge" class="product-image">
-        <div class="product-info">
+    <section class="product-grid women">
+        <!-- Women Products -->
+        <div class="product">
+            <img src="images/TurtlePirfume.PNG" alt="KACHBO CARDAMOM">
             <h2>KACHBO JASMINE</h2>
             <p>With notes of jasmine and sandalwood with a refreshing splash of cardamom. This masculine fragrance is perfect for those who embrace adventure.</p>
             <p>NOTES: Jasmine, Cardamom, Sandalwood</p>
-            <p class="price">Attar - .17oz | Perfume - 1oz</p>
+            <p class="price">1oz</p>
+            <button class="shop-button" onclick="openForm()">Order</button>
         </div>
+
+          <!-- Women Products -->
+          <div class="product">
+            <img src="images/TurtlePirfume.PNG" alt="KACHBO CARDAMOM">
+            <h2>KACHBO CARDAMOM</h2>
+            <p>With notes of fresh cardamom and jasmine, this fragrance is perfect for everyday wear.</p>
+            <p>NOTES: Cardamom, Jasmine, Sandalwood</p>
+            <p class="price">1oz</p>
+            <button class="shop-button" onclick="openForm()">Order</button>  
+        </div>
+    </section>
+
+
+    <!-- Payment Options -->
+    <div class="payment-options">
+        <h3>We accept the following payment methods:</h3>
+        <ul>
+            <li>Venmo</li>
+            <li>Cash on Pickup</li>
+        </ul>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>Contact: <a href="mailto:order@kachbofragrances.com">order@kachbofragrances.com</a></p>
+        <p>&copy; 2025 KACHBO FRAGRANCES. All rights reserved.</p>
+    </footer>
+
+     <!-- Modal (Pop-up) Form -->
+ <div id="orderFormModal" class="modal">
+    <div class="modal-content">
+        <span class="close-btn" onclick="closeForm()">&times;</span>
+        <h2>ORDER FORM</h2>
+
+        <!-- Embed Google Form -->
+    <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfZoGhWFCvtG0uH8q9Mo9_MjWGflls4T__bV4M4fyAdcehZ8w/viewform?embedded=true" width="540" height="650" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
     </div>
 </div>
 
-<h2>Why Choose Our Perfumes?</h2>
-<p class="features">Handcrafted in small batches for quality. Natural ingredients for a clean and fresh scent. Texas-inspired to capture the essence of ranch life.</p>
+<script>
+    // Open the order form modal with transition effect
+    function openForm() {
+        var modal = document.getElementById('orderFormModal');
+        var modalContent = modal.querySelector('.modal-content');
+        
+        modal.style.display = 'flex';
+        setTimeout(function() {
+            modal.classList.add('show');
+            modalContent.classList.add('show');
+        }, 10); // Small delay to trigger transition
+    }
 
-<footer>
-    <p>Contact for sale: <a href="mailto:order@kachbofragrances.com">order@kachbofragrances.com</a></p>
-    <p>&copy; 2024 KACHBO FRAGRANCES. All rights reserved.</p>
-</footer>
+    // Close the order form modal with transition effect
+    function closeForm() {
+        var modal = document.getElementById('orderFormModal');
+        var modalContent = modal.querySelector('.modal-content');
 
-<script src="script.js"></script>
+        modal.classList.remove('show');
+        modalContent.classList.remove('show');
+
+        setTimeout(function() {
+            modal.style.display = 'none';
+        }, 500); // Time matches the transition duration
+    }
+
+    // Close modal if user clicks outside of the modal content
+    window.onclick = function(event) {
+        var modal = document.getElementById('orderFormModal');
+        if (event.target == modal) {
+            closeForm();
+        }
+    }
+</script>
+
 </body>
 </html>
