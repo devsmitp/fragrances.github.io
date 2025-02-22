@@ -193,6 +193,23 @@
             max-width: 200px;
         }
 
+        .shop-button:disabled {
+            display: block;
+            margin: 15px auto;
+            padding: 12px 24px;
+            background-color: #16213E;
+            color: #FFFFFF;
+            cursor: not-allowed;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: 700;
+            font-size: 1.1em;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+            text-align: center;
+            max-width: 200px;
+        }
+        
+
         .shop-button:hover {
             background-color: #0056b3;
             transform: translateY(-2px);
@@ -361,7 +378,43 @@
         </div>
     </section>
 
+    <section id="herbal-beauty-products" style="padding: 6px; background-color: #E8EFE6; text-align: center;">
+        <h2>HERBAL BEAUTY PRODUCTS</h2>
 
+        <div class="product">
+          <h3>Organic Brahmi Oil - Hair Growth & Scalp Health</h3>
+          <p>USDA Certified Organic Brahmi Oil, known for its calming and rejuvenating properties for the scalp and hair.</p>
+          <p class="price">3.5 Fl Oz - $15</p>
+          <button class="shop-button" onclick="openForm()" disabled>Out of Order</button>
+        </div>
+      
+        <div class="product">
+          <h3>Neem Face Pack - Acne and Skin Purification</h3>
+          <p>Neem Face Pack formulated to cleanse and refresh the skin, helping to reduce acne and blemishes.</p>
+          <p class="price">10 pack - $15</p>
+          <button class="shop-button" onclick="openForm()" disabled>Out of Order</button>  
+        </div>
+      
+      </section>
+      
+      <section id="herbal-supplements" style="padding: 6px; background-color: #E8EFE6; text-align: center;">
+        <h2>HERBAL SUPPLEMENTS</h2>
+       
+        <div class="product">
+          <h3>Triphala Powder - Digestion & Detox</h3>
+          <p>A blend of herbs that support Digestion and Detox.</p>
+          <p class="price">16oz - $15</p>
+          <button class="shop-button" onclick="openForm()" disabled>Out of Order</button>  
+        </div>
+      
+        <div class="product">
+          <h3>Ashwagandha Powder - Stress Relief & Vitality</h3>
+          <p>A blend of herbs that support Stress Relief and Vitality.</p>
+          <p class="price">16oz - $15</p>
+            <button class="shop-button" onclick="openForm()" disabled>Out of Order</button>  
+        </div>
+      </section>
+      
     <!-- Payment Options -->
     <div class="payment-options">
         <h3>We accept the following payment methods:</h3>
